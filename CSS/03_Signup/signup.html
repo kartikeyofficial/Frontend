@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+         body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff;
+            margin: 0px;
+            padding: 0px;
+            height: 100hv;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         .card{
+            background-color: #f9f7f7;
+            border-radius: 10px;
+            padding: 30px;
+            width: 200px;
+            align-items: center;
+         }
+         h2{
+            color: black;
+            text-align: center;
+            margin-bottom: 20px;
+         }
+         input{
+            font-size: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            color: black;
+            
+         }
+         button{
+            color: #f9f7f7;
+            background-color:rgb(91, 151, 208);
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 160px;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+
+
+         }
+         button:hover{
+            background-color:rgb(51, 76, 174);
+         }
+         a{
+            color: #f9f7f7;
+            background-color:rgb(91, 208, 163);
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 160px;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+
+
+         }
+         a:hover{
+            background-color: #3dbc2c;
+         }
+
+         
+         
+    </style>
+    
+
+</head>
+<body>
+    <div class="card">
+    <h2>Sign up</h2>
+    <form>
+        <input type="text" name="" id=""placeholder="Name">
+        <input type="email" name="" id=""placeholder="Email">
+        <input type="password" name="" id="myInput"placeholder="password">
+        <input type="checkbox" onclick="myFunction()">Show Password
+        <button>Sign up</button>
+    </form>
+    <h5>Already Have an Account?</h5>
+    <a href="login.html">Login</a>
+    <h5>__________OR__________</h5>
+    <a href="https://music.apple.com/us/new">Sign Up With Apple</a>
+    <script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+     
+    </div>
+    
+</body>
+</html>
