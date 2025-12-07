@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Landing Page</title>
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100%;
+        }  
+        .container{
+            background: linear-gradient(135deg, #8a2be2,#4169e1);
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            display: flex;
+            
+
+        }
+        .content{
+            text-align: center;
+            background-color: rgba(255,255,255, 0.9);
+            box-shadow: 0 10px 6px rgba(107, 35, 120, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 400px;
+
+
+        }
+        .logo{
+            width: 150px;
+            box-shadow: 0 10px 6px rgba(103, 19, 109, 0.9);
+            object-fit: contain;
+        }
+        h1{
+            color: rgb(105, 3, 3);
+            margin-bottom: 0.5rem;
+            font-size: 40px;
+            
+        }
+        p{
+            color: rgb(87, 52, 7);
+            font-size: 20px;
+            margin-bottom:20px;
+            
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="email"]{
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 2px solid rgb(185, 184, 184);
+            margin-bottom: 1rem;
+            font-size: 20px;
+            
+            
+            
+        }
+        button{
+            padding: 0.5rem;
+            border-radius:5px;
+            border: 2px solid rgb(185, 184, 184);
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            background-color: #8a2be2;
+            box-shadow: 0 10px 9px rgba(103, 19, 109, 0.9);
+            transition: background-color 0.5s
+            ease-in-out;
+           
+        }
+        button:hover{
+            background-color: #07000f;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="chai1.png" class="logo" alt="Chai Photo">
+            <h1>Comming Soon</h1>
+            <p>We're Working hard to bring something amazing, stay Tuned!</p>
+            <form id="notify-form">
+                <input type="email" name="" id="" placeholder="Enter Your E-mail" required>
+                <button type="submit">Notify Me</button>
+            </form>
+        </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#a2d9ff" fill-opacity="1" d="M0,128L10.9,138.7C21.8,149,44,171,65,160C87.3,149,109,107,131,122.7C152.7,139,175,213,196,208C218.2,203,240,117,262,101.3C283.6,85,305,139,327,144C349.1,149,371,107,393,117.3C414.5,128,436,192,458,202.7C480,213,502,171,524,133.3C545.5,96,567,64,589,74.7C610.9,85,633,139,655,165.3C676.4,192,698,192,720,181.3C741.8,171,764,149,785,154.7C807.3,160,829,192,851,218.7C872.7,245,895,267,916,256C938.2,245,960,203,982,192C1003.6,181,1025,203,1047,186.7C1069.1,171,1091,117,1113,96C1134.5,75,1156,85,1178,101.3C1200,117,1222,139,1244,160C1265.5,181,1287,203,1309,202.7C1330.9,203,1353,181,1375,154.7C1396.4,128,1418,96,1429,80L1440,64L1440,320L1429.1,320C1418.2,320,1396,320,1375,320C1352.7,320,1331,320,1309,320C1287.3,320,1265,320,1244,320C1221.8,320,1200,320,1178,320C1156.4,320,1135,320,1113,320C1090.9,320,1069,320,1047,320C1025.5,320,1004,320,982,320C960,320,938,320,916,320C894.5,320,873,320,851,320C829.1,320,807,320,785,320C763.6,320,742,320,720,320C698.2,320,676,320,655,320C632.7,320,611,320,589,320C567.3,320,545,320,524,320C501.8,320,480,320,458,320C436.4,320,415,320,393,320C370.9,320,349,320,327,320C305.5,320,284,320,262,320C240,320,218,320,196,320C174.5,320,153,320,131,320C109.1,320,87,320,65,320C43.6,320,22,320,11,320L0,320Z"></path></svg>
+</body>
+</html>
