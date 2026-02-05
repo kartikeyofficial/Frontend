@@ -79,3 +79,39 @@ for(const city in worldCities){
     largeCities[city] = worldCities[city];
 }
 console.log(largeCities)
+
+// 7.) Problem 7
+allTea =["earl tea","green tea","chai","oolong tea"];
+availableTeas = [];
+allTea.forEach(tea => {
+    if(tea==="chai"){
+        return;
+    }
+    availableTeas.push(tea);
+    
+});
+console.log(availableTeas)
+
+// 8.) Problem 8
+let world = ["Berlin","Tokyo","Sydney","Paris"]
+let travelCities = []
+world.forEach(city => {
+    if(city ==="Sydney"){
+        return;
+    }
+    travelCities.push(city)
+    
+});
+console.log(travelCities);
+
+// 9.) Problem 9
+let num =[2,5,7,9]
+let doubleNumbers = []
+for(let l=0;l<num.length;l++){
+    if(num[l]===7){
+        continue;
+    }
+    doubleNumbers.push(num[l]*2)
+
+}
+console.log(doubleNumbers);
