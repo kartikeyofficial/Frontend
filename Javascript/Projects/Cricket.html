@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Cricket bat & ball</title>
+  <style>
+    .container{
+      align-items: center;
+      align-items: center;
+      text-align: center;
+    }
+    .bat{
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: none;
+      background-color: #84eb1d;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+    .ball{
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: none;
+      background-color: #e7d90e;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+    .stump{
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: none;
+      background-color: #e24a13;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1>Bat Ball Stump Game</h1>
+  <div class="buttons">
+  <button class="bat" onclick="
+    console.log('You Have Choosen The Bat');
+    let randomNumber = Math.random()*3;
+    if(randomNumber>1 && randomNumber<=1){
+      let computerChoice = 'Bat'
+      console.log('computer choice is bat');
+
+    }
+    else if(randomNumber>1 && randomNumber<=2){
+      let computerChoice = 'Ball'
+      console.log('computer choice is ball');
+    }
+    else{
+      let computerChoice = 'Stump'
+      console.log('computer choice is stump');
+    }
+    if(computerChoice === 'Bat'){
+      console.log('User Won!');
+    }
+    
+    ">Bat</button>
+  <button class="ball">Ball</button>
+  <button class="stump">Stump</button>
+  </div>
+  </div>
+ 
+  
+</body>
+</html>
