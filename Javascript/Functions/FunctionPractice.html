@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Practice</title>
+</head>
+<body>
+  <script>
+    function evenOdd(num){
+      if(num%2===0){
+        return `${num} is Even Number`
+      }
+      else{
+        return `${num} is Odd Number`
+      }
+    }
+    console.log(evenOdd(15))
+
+    console.log('Find The Largest Number of above');
+    function largerNumber(num1,num2){
+      if(num1===num2){
+         return `${num1} and ${num2} are Equal Numbers`
+      }
+      else if(num1<num2){
+        return `${num2} is Largest Number`
+      }
+      else{
+        return `${num1} is The Largest Number`
+      }
+    }
+    console.log(largerNumber(16,15))
+
+
+    console.log('Convert Celcius to Fahrenheit');
+    function CelciusToFehr(Celcius){
+      let F=(9/5)*Celcius+32;
+      return `${F} Degree Fahrenheit`;
+    }
+    console.log(CelciusToFehr(32))
+  </script>
+  
+</body>
+</html>
