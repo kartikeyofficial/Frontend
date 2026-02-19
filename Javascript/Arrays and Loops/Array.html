@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Array Practice</title>
+</head>
+<body>
+  <script>
+    let num = [1,2,3,4,5,6];
+    console.log(num);
+    console.log(num[0])
+    console.log(typeof num)
+
+    console.log(Array.isArray(num))
+    console.log(num.length)
+    
+    let newArray =[1,2,3];
+    console.log(newArray)
+    newArray.push(6);
+    console.log(newArray);
+    let popped = newArray.pop();
+    console.log('Popped Elements: ',popped);
+    console.log(newArray);
+
+
+    newArray.shift();
+    console.log(newArray);
+    newArray.unshift(7);
+    console.log(newArray)
+
+
+    let arr = [8,7,6,5,4,3,2,1];
+    console.log(arr)
+    arr.splice(1,2);
+    console.log(arr)
+    console.log(arr.toString())
+    let stringConvert = arr.toString();
+    console.log(typeof stringConvert)
+
+    arr.sort();
+    console.log(arr);
+
+    console.log(arr.valueOf());
+  </script>
+  
+</body>
+</html>

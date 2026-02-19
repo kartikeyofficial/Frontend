@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Practice Exercise</title>
+  <style>
+    .container{
+      text-align: center;
+    }
+    .my-button{
+      padding-left:30px ;
+      padding-right: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: none;
+      background-color: #7cda51;
+      font-size: 20px;
+      border-radius: 10px;
+    }
+    .odd{
+      background-color: #f9d104;
+    }
+    .even{
+      background-color: #f46e6e;
+    }
+    .reset{
+      padding-left:30px ;
+      padding-right: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: none;
+      background-color: #7cda51;
+      font-size: 20px;
+      border-radius: 10px;
+    }
+
+    #greeting{
+      color: rgb(3, 66, 45);
+      background-color: #e2a31b;
+      width: fit-content;
+      margin-left: 450px;
+      border-radius: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <button class="my-button" onclick="buttonPressed()"></button> <br><br>
+  <button class="reset" onclick="resetbutton()">Reset</button>
+  <h1 id="greeting"></h1>
+  </div>
+  <script>
+    let noOfTimesClicked =localStorage.getItem('noOfTimesClicked')|| 0;
+    
+  function buttonPressed(){
+   noOfTimesClicked++;
+   localStorage.setItem('noOfTimesClicked',noOfTimesClicked)
+   updateButton();
+   
+  }
+  function resetbutton(){
+    localStorage.clear();
+  }
+
+  function updateButton(){
+    console.log('Pressed')
+    let button = document.querySelector('.my-button');
+    button.innerText= noOfTimesClicked;
+
+    if(noOfTimesClicked % 2===0){
+      button.classList.remove('odd');
+      button.classList.add('even');
+
+    }
+    else{
+      button.classList.remove('even');
+      button.classList.add('odd');
+
+    }
+  }
+  updateButton();
+
+  function doGreeting(personName= 'Dear'){
+      let date = new Date();
+   let heading = document.querySelector('#greeting');
+   let hours = date.getHours();
+   if(hours>5 && hours<12){
+    heading.innerText=`Good Morning ${personName}`;
+   }
+   else if(hours>12 && hours<18){
+    heading.innerText=`Good Afternoon ${personName}`;
+
+   }
+   else{
+    heading.innerText=`Good Night ${personName}`;
+   }
+
+    };
+    doGreeting('Kartikey');
+   
+  </script>
+  
+</body>
+</html>

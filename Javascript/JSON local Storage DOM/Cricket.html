@@ -11,31 +11,20 @@
       text-align: center;
     }
     .bat{
-      padding: 5px;
-      padding-left: 10px;
-      padding-right: 10px;
-      border: none;
-      background-color: #84eb1d;
-      border-radius: 8px;
-      margin-right: 10px;
+      width: 100px;
+      border-radius: 10px;
+      cursor:pointer;
+      
     }
     .ball{
-      padding: 5px;
-      padding-left: 10px;
-      padding-right: 10px;
-      border: none;
-      background-color: #e7d90e;
-      border-radius: 8px;
-      margin-right: 10px;
+      width: 105px;
+      border-radius: 10px;
+      cursor:pointer;
     }
     .stump{
-      padding: 5px;
-      padding-left: 10px;
-      padding-right: 10px;
-      border: none;
-      background-color: #e24a13;
-      border-radius: 8px;
-      margin-right: 10px;
+      width: 85px;
+      border-radius: 10px;
+      cursor:pointer;
     }
     .reset{
       padding: 5px;
@@ -45,6 +34,7 @@
       background-color: #dc34dc;
       border-radius: 8px;
       margin-right: 10px;
+      cursor:pointer;
     }
   </style>
 </head>
@@ -52,28 +42,28 @@
   <div class="container">
   <h1>Bat Ball Stump Game</h1>
 
-  <button class="bat" onclick="
+  <button  onclick="
   let computerChoice = generateComputerChoice();
   let resultMsg = getResult('Bat', computerChoice);
   showResult('Bat', computerChoice, resultMsg);
   ">
-    Bat
+    <img src="https://shop.teamsg.in/cdn/shop/products/SLAMMER-CLASSIC_2-scaled.jpg?v=1745324932&width=1946" alt="bat-image" class="bat">
   </button>
 
-  <button class="ball" onclick="
+  <button  onclick="
     computerChoice = generateComputerChoice();
     resultMsg = getResult('Ball', computerChoice);
     showResult('Ball', computerChoice, resultMsg);
   ">
-    Ball
+   <img src="https://www.shutterstock.com/image-vector/traditional-red-leather-cricket-ball-600nw-2416767227.jpg" alt="ball-image" class="ball">
   </button>
 
-  <button class="stump" onclick="
+  <button  onclick="
     computerChoice = generateComputerChoice();
     resultMsg = getResult('Stump', computerChoice);
     showResult('Stump', computerChoice, resultMsg);
   ">
-    Stump
+    <img src="https://m.media-amazon.com/images/I/51vixSq1Z9L.jpg" alt="stump-image" class="stump">
   </button>
 
   <h3 id="user-move"></h3>
