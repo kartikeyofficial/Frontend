@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Todo App</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+     
+    }
+    #main-Heading{
+      text-align: center;
+      background-color: #aad476;
+      border-radius: 10px;
+      padding: 10px;
+      
+      
+    }
+    .input{
+      margin-left: 20px;
+      margin-top: 50px;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 10px;
+    }
+    .date{
+      margin-left: 20px;
+      margin-top: 50px;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 10px;
+    }
+    .button{
+      margin-left: 20px;
+      margin-top: 50px;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 10px;
+      border: none;
+      background-color: #21c021;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-Heading">Todo App</h1>
+  <input type="text" class="input" placeholder="Enter TODO here->">
+  <input type="date" class="date" name="" id="">
+  <button class="button" onclick="addTodo();">Add</button>
+  
+
+  <p id="todo-items"></p>
+
+  <script>
+    let todoList =[];
+    display();
+
+    function addTodo(){
+      let inputElement = document.querySelector('.input');
+      let todoItem = inputElement.value;
+      
+      todoList.push(todoItem)
+      inputElement.value = '';
+      display();
+
+    }
+      function display(){
+        let displayElement = document.querySelector('#todo-items');
+        for(let i=0;i<todoList.length;i++){
+          displayElement.innerText = displayElement.
+          innerText + todoList[i];
+        }
+      }
+    
+  </script>
+</body>
+</html>
