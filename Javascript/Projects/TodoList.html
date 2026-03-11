@@ -1,77 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  
-  <title>Todo App</title>
-  <style>
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-      text-align: center;
-     
-    }
-    #main-Heading{
-      text-align: center;
-      background-color: #aad476;
-      border-radius: 10px;
-      padding: 10px;
-      
-      
-    }
-    .input{
-      margin-left: 20px;
-      margin-top: 50px;
-      padding: 10px;
-      font-size: 20px;
-      border-radius: 10px;
-    }
-    .date{
-      margin-left: 20px;
-      margin-top: 50px;
-      padding: 10px;
-      font-size: 20px;
-      border-radius: 10px;
-    }
-    .button{
-      margin-left: 20px;
-      margin-top: 50px;
-      padding: 10px;
-      font-size: 20px;
-      border-radius: 10px;
-      border: none;
-      background-color: #21c021;
-    }
-  </style>
-</head>
-<body>
-  <h1 id="main-Heading">Todo App</h1>
-  <input type="text" class="input" placeholder="Enter TODO here->">
-  <input type="date" class="date" name="" id="">
-  <button class="button" onclick="addTodo();">Add</button>
-  
+  <head>
+    <title>Todo App</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      #main-Heading {
+        text-align: center;
+        background-color: #aad476;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .input {
+        margin-left: 20px;
+        margin-top: 50px;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+      }
+      .date {
+        margin-left: 20px;
+        margin-top: 50px;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+      }
+      .button {
+        margin-left: 20px;
+        margin-top: 50px;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: #21c021;
+        cursor: pointer;
+      }
+      .delete {
+        margin-top: 10px;
+        padding: 10px;
 
-  <p id="todo-items"></p>
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: #992d03;
+        color: white;
+        cursor: pointer;
+      }
+      .todo-container {
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        margin-top: 10px;
+        font-size: 20px;
+        grid-row: 20px;
+        grid-column: 10px;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="main-Heading">Todo App</h1>
+    <input type="text" class="input" placeholder="Enter TODO here->" />
+    <input type="date" class="date" name="" id="" />
+    <button class="button" onclick="addTodo()">Add</button>
 
-  <script>
-    let todoList =[];
-    display();
+    <div class="todo-container"></div>
 
-    function addTodo(){
-      let inputElement = document.querySelector('.input');
-      let todoItem = inputElement.value;
-      
-      todoList.push(todoItem)
-      inputElement.value = '';
+    <script>
+      let todoList = [{}];
       display();
 
-    }
-      function display(){
-        let displayElement = document.querySelector('#todo-items');
-        for(let i=0;i<todoList.length;i++){
-          displayElement.innerText = displayElement.
-          innerText + todoList[i];
-        }
+      function addTodo() {
+        let inputElement = document.querySelector(".input");
+        let dateElement = document.querySelector(".date");
+        let todoItem = inputElement.value;
+        let todoDate = dateElement.value;
+
+        todoList.push({ item: todoItem, dueDate: todoDate });
+        inputElement.value = "";
+        dateElement.value = "";
+        display();
       }
-    
-  </script>
-</body>
+      function display() {
+        let containerElement = document.querySelector(".todo-container");
+
+        let newHTML = "";
+
+        for (let i = 0; i < todoList.length; i++) {
+          let item = todoList[i].item;
+          let dueDate = todoList[i].dueDate;
+
+          newHTML += `
+          <span>${item}</span>
+            <span>${dueDate}</span>
+          <button class='delete' onclick="todoList.splice(${i},1);
+          display();">Delete</button>
+          `;
+        }
+        containerElement.innerHTML = newHTML;
+      }
+    </script>
+  </body>
 </html>
