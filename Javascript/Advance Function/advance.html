@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Advance Function</title>
+</head>
+<body>
+  <script>
+    let sum = function(num1, num2){
+      return num1+num2;
+    }
+    console.log(sum(4,6))
+
+    let sumThreeNumbers = function(num1,num2,num3,sumTwoNumbers){
+     let sum =sumTwoNumbers(num1,num2);
+     return sumTwoNumbers(sum,num3);
+    }
+    console.log(sumThreeNumbers(4,5,7, sum));
+
+
+    let sum1 = (num1, num2)=> {return num1+num2};
+    console.log(sum1(3,2))
+
+
+
+    setTimeout(function(){
+      console.log('Subahn ho Gayi Babu')
+    },2000 )
+
+    let alarm = ()=> console.log(`Subaha ho gayi, uth jaao `)
+    let intervalId = setInterval(alarm, 1000);
+    setTimeout(()=> clearInterval(intervalId),5000);
+    
+  </script>
+   
+</body>
+</html>

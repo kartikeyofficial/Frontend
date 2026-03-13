@@ -68,38 +68,63 @@
     <div class="todo-container"></div>
 
     <script>
-      let todoList = [{}];
-      display();
+     
+  // Load todos from localStorage or create empty array
+  let todoList = JSON.parse(localStorage.getItem("todos")) || [];
 
-      function addTodo() {
-        let inputElement = document.querySelector(".input");
-        let dateElement = document.querySelector(".date");
-        let todoItem = inputElement.value;
-        let todoDate = dateElement.value;
+  display();
 
-        todoList.push({ item: todoItem, dueDate: todoDate });
-        inputElement.value = "";
-        dateElement.value = "";
-        display();
-      }
-      function display() {
-        let containerElement = document.querySelector(".todo-container");
+  function addTodo() {
+    let inputElement = document.querySelector(".input");
+    let dateElement = document.querySelector(".date");
 
-        let newHTML = "";
+    let todoItem = inputElement.value;
+    let todoDate = dateElement.value;
 
-        for (let i = 0; i < todoList.length; i++) {
-          let item = todoList[i].item;
-          let dueDate = todoList[i].dueDate;
+    if (todoItem === "" || todoDate === "") {
+      alert("Please enter todo and date");
+      return;
+    }
 
-          newHTML += `
-          <span>${item}</span>
-            <span>${dueDate}</span>
-          <button class='delete' onclick="todoList.splice(${i},1);
-          display();">Delete</button>
-          `;
-        }
-        containerElement.innerHTML = newHTML;
-      }
+    todoList.push({ item: todoItem, dueDate: todoDate });
+
+    // Save to localStorage
+    localStorage.setItem("todos", JSON.stringify(todoList));
+
+    inputElement.value = "";
+    dateElement.value = "";
+
+    display();
+  }
+
+  function deleteTodo(index) {
+    todoList.splice(index, 1);
+
+    // Update localStorage after delete
+    localStorage.setItem("todos", JSON.stringify(todoList));
+
+    display();
+  }
+
+  function display() {
+    let containerElement = document.querySelector(".todo-container");
+
+    let newHTML = "";
+
+    for (let i = 0; i < todoList.length; i++) {
+      let item = todoList[i].item;
+      let dueDate = todoList[i].dueDate;
+
+      newHTML += `
+        <span>${item}</span>
+        <span>${dueDate}</span>
+        <button class='delete' onclick="deleteTodo(${i})">Delete</button>
+      `;
+    }
+
+    containerElement.innerHTML = newHTML;
+  }
+
     </script>
   </body>
 </html>
