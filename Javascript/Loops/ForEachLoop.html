@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>For Each Loop</title>
+</head>
+<body>
+  <script>
+    let arr =[3,4,5,6,7];
+    console.log("Traditional Manners:")
+    for (let i=0;i<arr.length;i++){
+      console.log(arr[i]);
+    }
+    console.log("Modern Manner: ")
+    arr.forEach(num=>{
+      console.log(num);
+    })
+
+    function search(arr,num){
+      for(let i=0;i<arr.length;i++){
+          if(arr[i]===num){
+            console.log(`Element is Found at Index: ${i}`);
+          }
+      }
+    }
+    search(arr,7);
+
+
+  </script>
+  
+</body>
+</html>
