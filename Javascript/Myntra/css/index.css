@@ -232,3 +232,91 @@ header {
     text-align: center;
     padding: 15px;
 }
+
+.items-container{
+width: 80%;
+margin-left: 10%;
+margin-top: 40px;
+
+}
+.item-container{
+    width: 200px;
+
+}
+.item-image{
+    width: 100%;
+    border-radius: 8px;
+
+}
+.rating{
+    font-size: 12px;
+    font-weight: 700;
+}
+.company-name{
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #282c3f;
+    margin-bottom: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.item-name{
+    color: #535766;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 8px;
+
+}
+.price{
+   
+}
+.current-price{
+    font-size: 14px;
+    font-weight: 700;
+    color: #282c3f;
+
+}
+.original-price{
+    text-decoration: line-through;
+    color: #7e818c;
+    font-weight: 400;
+    margin-left: 5px;
+    font-size: 12px;
+}
+.discount{
+    color: #ff905a;
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 5px;
+
+}
+.btn-add-bag{
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #6db713;
+    color: white;
+    border-radius: 8px;
+    border: none;
+
+}
+.btn-add-bag:hover{
+    background-color: #9e9c19;
+    color: black;
+}
