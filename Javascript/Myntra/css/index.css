@@ -190,12 +190,13 @@ header {
     font-weight: 700;
 }
 
-.category-items {
+.category-items,.items-container {
     width: 80%;
     margin: 50px 10%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    
 }
 
 .sale_item {
@@ -238,9 +239,11 @@ width: 80%;
 margin-left: 10%;
 margin-top: 40px;
 
+
 }
 .item-container{
     width: 200px;
+    margin-right: 20px;
 
 }
 .item-image{
@@ -304,6 +307,7 @@ margin-top: 40px;
 .btn-add-bag{
     margin-top: 10px;
     margin-left: 20px;
+    margin-bottom: 30px;
     padding-left:20px;
     padding-right: 20px;
     padding-bottom: 7px;
@@ -314,6 +318,8 @@ margin-top: 40px;
     color: white;
     border-radius: 8px;
     border: none;
+    cursor: pointer;
+
 
 }
 .btn-add-bag:hover{

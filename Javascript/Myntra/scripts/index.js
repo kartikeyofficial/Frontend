@@ -1,23 +1,40 @@
+
+displayItemsOnHomePage();
+
+
+function addToBag(){
+  
+
+};
+
+function displayItemsOnHomePage(){
+
 let itemsContainerElement = document.querySelector(".items-container");
 
-let item = {};
-
-itemsContainerElement.innerHTML = ` 
+let innerHtml = '';
+items.forEach(item =>{
+       innerHtml += ` 
 <div class="item-container">
                 
-<img class="item-image" src="images/1.jpg" alt="item Image">
+<img class="item-image" src="${item.image}" alt="item Image">
                 
 <div class="rating">
-        4.5 ⭐ | 1.4k
+        ${item.rating.stars} ⭐ | ${item.rating.count}
 </div>
-<div class="company-name">Carlton London</div>
-  <div class="item-name">Rhodium-Plated CZ Floral</div>
+<div class="company-name">${item.company}</div>
+  <div class="item-name">${item.item_name}</div>
     <div class="pricing">
-      <span class="current-price">Rs. 606</span>
-      <span class="original-price">Rs. 1045</span>
-      <span class="discount">(42% OFF)</span>
+      <span class="current-price">Rs. ${item.current_price}</span>
+      <span class="original-price">Rs. ${item.original_price}</span>
+      <span class="discount">(${item.discount_percentage}% OFF)</span>
                 
     </div>
-  <button class="btn-add-bag">Add to Bag</button>
+  <button class="btn-add-bag" onclick="addToBag()">Add to Bag</button>
 
-</div>`;
+</div>`
+});
+
+
+itemsContainerElement.innerHTML = innerHtml;
+
+};
