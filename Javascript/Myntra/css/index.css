@@ -1,5 +1,5 @@
 /***************** Item Page CSS **************************/
-/*.action_container {
+/* .action_container {
     text-decoration: none;
 }
 a.action_container:link {
@@ -205,7 +205,7 @@ header {
 
 .footer_container {
     padding: 30px 0px 40px 0px;
-    background: #FAFBFC;
+    background: #eeeded;
     display: flex;
     justify-content: space-evenly;
 }
@@ -324,5 +324,26 @@ margin-top: 40px;
 }
 .btn-add-bag:hover{
     background-color: #9e9c19;
+    color: black;
+}
+.bag-item-count{
+     background-color: #f16565;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 18px;
+    padding: 0 6px;
+    height: 18px;
+    position: relative;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    left: 13px;
+    top: -44px;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+.action_container {
+    text-decoration: none;
     color: black;
 }
