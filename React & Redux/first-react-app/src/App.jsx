@@ -1,10 +1,19 @@
-import {kkButton} from "./kkButton";
+import {KkButton} from "./KkButton";
+import Hello from "./Hello";
+import Random from "./Random";
+
 function App(){
   return <div>
     <h1>
     Hello World!
+    <Hello></Hello>
   </h1>
-   <kkButton></kkButton>
+   <KkButton></KkButton>
+   <Random></Random>
+   <Random></Random>
+   <Random></Random>
+   <Random></Random>
+   <Random></Random>
   </div>
   
   
