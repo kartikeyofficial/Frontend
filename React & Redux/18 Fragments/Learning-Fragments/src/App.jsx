@@ -1,19 +1,21 @@
+// import React from 'react'
 
-import './App.css'
-
+import "./App.css";
+import FoodItems from "./components/FoodsItems";
+import ErrorMessage from "./components/ErrorMessage";
 function App() {
-  return <div>
-    <center>
-    <h1>Healthy Food</h1>
-    <ul class="list-group">
-  <li class="list-group-item">Apple</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
-</ul>
-</center>
-  </div>
+  
+
+  let foodItems = ['Dal','Green Vegetables','Roti','Salad','Milk','Ghee'];
+  return (
+    <>
+      <center className="container">
+        <h1 className="heading">Healthy Food</h1>
+        <ErrorMessage></ErrorMessage>
+        <FoodItems></FoodItems>
+      </center>
+    </>
+  );
 }
 
-export default App
+export default App;
