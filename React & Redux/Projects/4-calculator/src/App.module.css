@@ -1,0 +1,9 @@
+.calculator{
+  margin-top: 100px;
+  border: 1px solid black;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px 10px rgb(159, 155, 155);
+  background-color: #c0e4e2;
+}
+
